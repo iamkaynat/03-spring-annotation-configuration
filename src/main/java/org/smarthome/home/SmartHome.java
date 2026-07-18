@@ -1,14 +1,15 @@
 package org.smarthome.home;
 
 import org.smarthome.room.SmartRoom;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SmartHome {
     private String ownerName;
     private String address;
-
-    public SmartHome(String ownerName, String address, SmartRoom smartRoom) {
-        this.ownerName = ownerName;
-        this.address = address;
+    @Autowired
+    public SmartHome( SmartRoom smartRoom) {
         this.smartRoom = smartRoom;
     }
 

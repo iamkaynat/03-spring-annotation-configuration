@@ -1,10 +1,13 @@
 package org.smarthome.room;
 
 import org.smarthome.light.SmartLight;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SmartRoom {
-    public SmartRoom(String roomName, SmartLight smartLight) {
-        this.roomName = roomName;
+    @Autowired
+    public SmartRoom( SmartLight smartLight) {
         this.smartLight = smartLight;
     }
 

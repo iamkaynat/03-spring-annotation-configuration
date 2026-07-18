@@ -1,11 +1,10 @@
 package org.smarthome.light;
 
-public class SmartLight {
-    public SmartLight(String brand, String brightness) {
-        this.brand = brand;
-        this.brightness = brightness;
-    }
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
+public class SmartLight {
     public String getBrand() {
         return brand;
     }
@@ -31,7 +30,6 @@ public class SmartLight {
     public void turnOff(){
         System.out.println("Smart Light is turn off.");
     }
-
     public String displayLight(){
         return "Brand : " + this.brand + " Brightness : " + this.brightness;
     }
