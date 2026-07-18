@@ -1,6 +1,27 @@
 package org.smarthome.light;
 
 public class SmartLight {
+    public SmartLight(String brand, String brightness) {
+        this.brand = brand;
+        this.brightness = brightness;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getBrightness() {
+        return brightness;
+    }
+
+    public void setBrightness(String brightness) {
+        this.brightness = brightness;
+    }
+
     private String brand;
     private String brightness;
 
